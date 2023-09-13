@@ -15,7 +15,7 @@ def main():
 
         chat_model = ChatOpenAI()
 
-        api_key = API_KEY_DART
+        api_key = 'API_KEY_DART'
         
         dart = OpenDartReader(api_key) 
 

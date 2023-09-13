@@ -15,8 +15,10 @@ def main():
 
         chat_model = ChatOpenAI()
 
-        api_key = 'API_KEY_DART'
-        
+        # api_key = 'API_KEY_DART'
+        var_name = "API_KEY_DART"
+        api_key = st.secrets.get(var_name, None)
+        #api_key = os.environ.get(var_name, None)
         dart = OpenDartReader(api_key) 
 
         st.title('국내 업체 경영현황 보고서')

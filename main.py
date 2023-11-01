@@ -10,7 +10,7 @@ from streamlit_extras.buy_me_a_coffee import button
 def main():
 
     # while True:  # 무한 루프 시작
-
+        st.set_page_config(page_title='VendorReport', page_icon = 'BuyBeer_128.png', initial_sidebar_state = 'auto')
         button(username="damuljumong", floating=True, width=221)
 
         chat_model = ChatOpenAI()

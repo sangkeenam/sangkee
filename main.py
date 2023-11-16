@@ -13,7 +13,7 @@ def main():
         st.set_page_config(page_title='VendorReport', page_icon = 'BuyBeer_128.png', initial_sidebar_state = 'auto')
         button(username="damuljumong", floating=True, width=221)
 
-        chat_model = ChatOpenAI()
+        # chat_model = ChatOpenAI()
 
         # api_key = 'API_KEY_DART'
         var_name = "API_KEY_DART"
@@ -34,7 +34,7 @@ def main():
         if stock_codes_input:
             stock_codes = [code.strip() for code in stock_codes_input.split(',')]
 
-        content = st.text_input('인공지능이 분석할 업체명을 입력하세요.')
+        # content = st.text_input('인공지능이 분석할 업체명을 입력하세요. 예) 삼성전자')
 
         if st.button('업체 분석 요청'):
             with st.spinner('업체 리포트 작성 중...'):
@@ -168,10 +168,10 @@ def main():
                         if not issues.empty:
                             st.write(each_event)
                             st.dataframe(issues, width=1200)
-            st.write("인공지능 ( Open AI )이 분석한 기업 정보를 알려드립니다")
-            result = chat_model.predict(content + "을 분석해줘")    # OpenAI sknam
+            #st.write("인공지능 ( Open AI )이 분석한 기업 정보를 알려드립니다")
+            #result = chat_model.predict(content + "을 분석해줘")    # OpenAI sknam
 
-            st.write(result)
+            #st.write(result)
 
 if __name__ == '__main__':
     main()
